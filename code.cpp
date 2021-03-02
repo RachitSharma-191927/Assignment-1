@@ -32,6 +32,7 @@ int read_matrix(int a,int b,int *p)
             cin >> *(p+m*i+j);
         }
     }
+    return 0;
 }
 int display_matrix(int x,int y,int *p)
 {
@@ -46,5 +47,6 @@ int display_matrix(int x,int y,int *p)
         }
         cout<<endl;
     }
+    return 0;
 }
 
