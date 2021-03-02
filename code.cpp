@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-int read_input(int a,int b,int *p);
-int print_input(int x,int y,int *p);
+int read_matrix(int a,int b,int *p);
+int display_matrix(int x,int y,int *p);
 
 
 int main()
@@ -13,14 +13,14 @@ int main()
     cout <<"\nEnter the number of columns of the matrix :";
     cin >> m;
     int array[n][m];
-    read_input(n,m,&array[0][0]);
-    print_input(n,m,&array[0][0]);
+    read_matrix(n,m,&array[0][0]);
+    display_matrix(n,m,&array[0][0]);
     return 0;
 
 
 
 }
-int read_input(int a,int b,int *p)
+int read_matrix(int a,int b,int *p)
 {
     cout<<"\nEnter the elements of matrix :";
     int m=b;
@@ -33,7 +33,7 @@ int read_input(int a,int b,int *p)
         }
     }
 }
-int print_input(int x,int y,int *p)
+int display_matrix(int x,int y,int *p)
 {
      cout<<"\nElements of matrix are:\n";
      int m=y;
