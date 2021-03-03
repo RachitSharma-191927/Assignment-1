@@ -6,8 +6,6 @@ double power(double m,int n=2)
     double res;
     res=pow(m,n);
     return res;
-    
-
 }
 double print(double);
 int main()
@@ -23,8 +21,6 @@ int main()
     x=power(a,b);
     print(x);
     return 0;
-
-
 }
 double print(double x)
 {
