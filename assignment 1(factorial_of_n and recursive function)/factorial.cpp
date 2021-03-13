@@ -1,14 +1,19 @@
 #include<iostream>
 #include<cmath>
 double factorial(double m);
+double display(double a)
+{
+    std::cout<<"\nThe required factorial is :"<<a;
+    return 0;
+}
 int main()
 {
     double a;
-    std::cout<<"Enter the number to find its factorial :";
+    std::cout<<"\nEnter the number to find its factorial :";
     std::cin>>a;
     double x;
     x=factorial(a);
-    std::cout<<"The required factorial is :"<<x;
+    display(x);
     return 0;
 
 }
