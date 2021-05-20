@@ -4,7 +4,7 @@ using namespace std;
 class strings
 {
    private:
-   char a[20],b[20],c[20];
+   char a[20],b[20],c[20],e[40];
    public :
    strings()
    {
@@ -31,20 +31,51 @@ class strings
      b[i]=*(d+i);
      }
    }
-   string add_getter()
+   void addition()
    {
-       return strcat(a,b);
+     int j=0;
+     int i=0;
+      while(a[i]!='\0')
+      {
+        e[i]=a[i];
+        i++;  
+      }
+      while(b[j]!='\0')
+      {
+        e[i]=b[j];
+        j++;
+        i++;
+      }
+    e[i]='\0';
+    std::cout<<e;
    }
+
    void equate()
    {
-       int c;
-       c=strcmp(a,b);
-       if(c>0)
-       cout<<"\n"<<a<<" string is greater";
-       else if(c==0)
-       cout<<"\n\nBoth Strings Are Equal";
-       else
-       cout<<endl<<b<<" string is greater ";
+     
+     int i=0,n=0;
+       while((a[i]!='\0') && (b[i]!='\0'))
+       {
+         if(a[i]>b[i])
+         {
+          std::cout<<"\n"<<a<<" string is greater";
+          n=1;
+         }
+         else if(a[i]<b[i])
+         {
+           std::cout<<"\n"<<b<<" string is greater";
+          n=1;
+         }
+         i++;
+       }
+      if(n==0)
+         {
+           std::cout<<"\n"<<"Both strings "<<a<<" and "<<b<<" are equal";
+           
+         }
+         
+  
+       
    }
    string get_string()
    {
@@ -82,7 +113,8 @@ int main()
     cout<<"\nEnter the string 2 to add :";
     cin.getline(d,20);
     m.set_string2(d);
-    cout<<"\nThe New added String A Is :"<<m.add_getter();
+    cout<<"\nThe New added String A Is :";
+    m.addition();
     break;
 
     case 3:
