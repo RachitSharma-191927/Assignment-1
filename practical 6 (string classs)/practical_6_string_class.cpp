@@ -5,13 +5,17 @@ class strings
 {
    private:
    char a[20],b[20],c[20],e[40];
+   
    public :
+   
    strings()
    {
      cout<<"\n\n\t\t\t\t\t\t String Function Programme ";
+     c[0]=('\0');
    }
    void set_string(char *d)
    {
+     
      for(int i=0;i<20;i++)
      {
      c[i]=*(d+i);
@@ -47,38 +51,43 @@ class strings
         i++;
       }
     e[i]='\0';
-    std::cout<<e;
+    
+   }
+   string get_addition()
+   {
+     return e;
    }
 
    void equate()
    {
      
      int i=0,n=0;
-       while((a[i]!='\0') && (b[i]!='\0'))
+       while((b[i]!='\0')||(a[i]!='\0'))
        {
-         if(a[i]>b[i])
+        if(a[i]>b[i])
          {
           std::cout<<"\n"<<a<<" string is greater";
           n=1;
+          break;
          }
          else if(a[i]<b[i])
          {
            std::cout<<"\n"<<b<<" string is greater";
-          n=1;
+           n=1;
+           break;
          }
          i++;
+
        }
       if(n==0)
          {
            std::cout<<"\n"<<"Both strings "<<a<<" and "<<b<<" are equal";
            
          }
-         
-  
-       
    }
    string get_string()
    {
+     
      return c;
    }
    
@@ -113,8 +122,9 @@ int main()
     cout<<"\nEnter the string 2 to add :";
     cin.getline(d,20);
     m.set_string2(d);
-    cout<<"\nThe New added String A Is :";
     m.addition();
+    cout<<"\nThe New added String A Is :"<<m.get_addition();
+    
     break;
 
     case 3:
