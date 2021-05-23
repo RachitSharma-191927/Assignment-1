@@ -123,11 +123,8 @@ int main()
     time t2(hour,minute,second);
    cout<<"\n\nEntered time is :"<<setfill('0')<<setw(2)<<t2.hour_getter()<<":"<<setfill('0')<<setw(2)<<t2.minute_getter()<<":";
    cout<<setfill('0')<<setw(2)<<t2.second_getter()<< t2.meridiem();
-   
-
    cout<<"\t\t\t\n\nAdding both the times";
    cout<<"\n\nRequired Added Time :";
-
    time result(0,0,0);
    result=add(t1,t2);
    cout<<setfill('0')<<setw(2)<<result.hour_getter()<<":"<<setfill('0')<<setw(2)<<result.minute_getter()<<":";
